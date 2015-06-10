@@ -13,10 +13,31 @@
 
 @interface ChatViewController ()
 @property (nonatomic, strong)UIWebView *webView;
+@property (nonatomic, strong)NSString *url;
+@property (nonatomic, strong)Post *post;
 @end
 
 @implementation ChatViewController
 
+
+- (id)initWithUrl:(NSString *)string {
+    self = [super init];
+    if (!self) return nil;
+    
+    self.url = string;
+    
+    return self;
+}
+
+- (id)initWithPost:(Post *)post {
+    self = [super init];
+    if (!self) return nil;
+    
+    self.post = post;
+    self.url = post.link;
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +55,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     if (!self.webView) {
         ECMLabel *titleLabel = [[ECMLabel alloc] init];
-        titleLabel.text = @"Chat";
+        if(self.post){
+            NSMutableAttributedString *authorString = [[NSMutableAttributedString alloc] initWithString:self.post.author];
+            [authorString addAttribute:NSForegroundColorAttributeName value:[UIColor ecm_blue] range:NSMakeRange(0, self.post.author.length)];
+            titleLabel.text = [authorString string];
+            titleLabel.attributedText = authorString;
+        } else {
+            titleLabel.text = @"Chat";   
+        }
         self.navigationItem.titleView = titleLabel;
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
@@ -48,7 +76,7 @@
             make.edges.equalTo(self.view);
         }];
         
-        NSURL *url = [NSURL URLWithString:@"https://liveguide01eu.netop.com/lg/engine/sources/swf.php?LiveGuideUID=lgW9JHrdb73ZwHkMd2Cg0b&myurl=Email&title=Email&LiveGuideCIDuration=&LiveGuideCIRef=&LiveGuideCITitle=&LiveGuideCIUrl="];
+        NSURL *url = [NSURL URLWithString:self.url];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
         [request setValue:@"no-cache" forHTTPHeaderField:@"cache-control"];
         [self.webView loadRequest:request];

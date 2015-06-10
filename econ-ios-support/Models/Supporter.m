@@ -22,4 +22,16 @@
     return attr;
 }
 
+
+- (void)setSkills:(NSArray *)skills {
+    if(!skills) {
+        _skills = nil;
+        return;
+    }
+    NSMutableSet *set = [[NSMutableSet alloc] init];
+    for(NSString *skill in skills) {
+        [set addObject:skill];
+    }
+    _skills = [set allObjects];
+}
 @end

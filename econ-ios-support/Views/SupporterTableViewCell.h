@@ -11,6 +11,7 @@
 @interface SupporterTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *skillsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *flagView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @end

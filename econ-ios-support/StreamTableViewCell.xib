@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StreamTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thg-MY-q5P">
+                    <rect key="frame" x="8" y="8" width="75" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="//" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bds-T5-fUM">
+                    <rect key="frame" x="103" y="9" width="12" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-4f-GQq">
+                    <rect key="frame" x="124" y="8" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U53-bW-0z9">
+                    <rect key="frame" x="8" y="36" width="545" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DXX-4f-GQq" firstAttribute="top" secondItem="bds-T5-fUM" secondAttribute="top" constant="-1" id="98e-Xe-ZKs"/>
+                <constraint firstItem="DXX-4f-GQq" firstAttribute="top" secondItem="thg-MY-q5P" secondAttribute="top" id="9gg-y7-GoY"/>
+                <constraint firstAttribute="trailing" secondItem="U53-bW-0z9" secondAttribute="trailing" constant="20" id="Eif-Ht-HZr"/>
+                <constraint firstItem="DXX-4f-GQq" firstAttribute="leading" secondItem="bds-T5-fUM" secondAttribute="trailing" constant="10" id="FoQ-1B-zdL"/>
+                <constraint firstItem="thg-MY-q5P" firstAttribute="leading" secondItem="U53-bW-0z9" secondAttribute="leading" id="Vpw-Gk-zj7"/>
+                <constraint firstItem="bds-T5-fUM" firstAttribute="leading" secondItem="thg-MY-q5P" secondAttribute="trailing" constant="20" id="YWA-ON-pNI"/>
+                <constraint firstItem="U53-bW-0z9" firstAttribute="top" secondItem="thg-MY-q5P" secondAttribute="bottom" constant="8" id="ZOQ-Mg-tDW"/>
+                <constraint firstItem="thg-MY-q5P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="dyJ-IG-gJF"/>
+                <constraint firstItem="thg-MY-q5P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="oWq-PX-UVr"/>
+                <constraint firstItem="bds-T5-fUM" firstAttribute="top" secondItem="thg-MY-q5P" secondAttribute="top" constant="1" id="pkK-YQ-3zM"/>
+                <constraint firstItem="bds-T5-fUM" firstAttribute="top" secondItem="thg-MY-q5P" secondAttribute="top" constant="1" id="ruZ-cf-kpa"/>
+                <constraint firstItem="DXX-4f-GQq" firstAttribute="top" secondItem="bds-T5-fUM" secondAttribute="top" constant="-1" id="wkE-l9-kwj"/>
+                <constraint firstItem="bds-T5-fUM" firstAttribute="top" secondItem="thg-MY-q5P" secondAttribute="top" id="xS0-7B-bJV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="pkK-YQ-3zM"/>
+                    <exclude reference="xS0-7B-bJV"/>
+                    <exclude reference="98e-Xe-ZKs"/>
+                    <exclude reference="9gg-y7-GoY"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="authorLabel" destination="DXX-4f-GQq" id="q9g-fb-Eg6"/>
+                <outlet property="dateLabel" destination="thg-MY-q5P" id="b0L-cH-s9d"/>
+                <outlet property="descriptionLabel" destination="U53-bW-0z9" id="2NJ-7u-9o1"/>
+            </connections>
+            <point key="canvasLocation" x="446" y="179"/>
+        </view>
+    </objects>
+</document>

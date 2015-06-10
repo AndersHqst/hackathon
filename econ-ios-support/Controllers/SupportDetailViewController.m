@@ -41,10 +41,14 @@
     nameLabel.center = nameCenter;
     
     UILabel *nickNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, nameLabel.frame.size.height, 200, 20)];
-    nickNameLabel.text = [NSString stringWithFormat:@"\"%@\"", self.supporter.nickName];
+    NSString *nickNameString = [NSString stringWithFormat:@"\"%@\"", self.supporter.callname];
+    
+    NSMutableAttributedString *attrnickNameString = [[NSMutableAttributedString alloc] initWithString:nickNameString];
+    [attrnickNameString addAttribute:NSForegroundColorAttributeName value:[UIColor ecm_orange] range:NSMakeRange(0, nickNameString.length)];
+    
+    nickNameLabel.attributedText = attrnickNameString;
     nickNameLabel.textAlignment = NSTextAlignmentCenter;
     nickNameLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:12.0];
-    nickNameLabel.textColor = [UIColor grayColor];
     [nickNameLabel sizeToFit];
     CGPoint nickCenter = CGPointMake(view.center.x, nickNameLabel.center.y);
     nickNameLabel.center = nickCenter;
@@ -76,9 +80,9 @@
     }
     self.profileImageView.image = image;
     
-    self.aboutLabel.text = self.supporter.about;
-    self.backgroundLabel.text = self.supporter.background;
-    self.flagImageView.image = [self supporterImage];
+    self.aboutLabel.text = self.supporter.bio;
+    self.backgroundLabel.text = self.supporter.education;
+    self.flagImageView.image = [SupportDetailViewController supporterFlag:self.supporter];
     self.skillsLabel.attributedText = [self.supporter attributedStringForSkills];
 }
 
@@ -87,12 +91,12 @@
     
 }
 
-- (UIImage *)supporterImage {
-    if([self.supporter.country isEqualToString:@"se"]) {
++ (UIImage *)supporterFlag:(Supporter *)supporter {
+    if([[supporter.country lowercaseString] isEqualToString:@"se"]) {
         return [UIImage imageNamed:@"Sweden"];
-    } else if([self.supporter.country isEqualToString:@"fi"]) {
+    } else if([[supporter.country lowercaseString] isEqualToString:@"fi"]) {
         return [UIImage imageNamed:@"Finland"];
-    } else if([self.supporter.country isEqualToString:@"no"]) {
+    } else if([[supporter.country lowercaseString] isEqualToString:@"no"]) {
         return [UIImage imageNamed:@"Norway"];
     }
     // default
@@ -114,7 +118,7 @@
 
 - (IBAction)chatButtonClick:(id)sender {
     NSLog(@"show chat");
-    ChatViewController *cvc = [[ChatViewController alloc] init];
+    ChatViewController *cvc = [[ChatViewController alloc] initWithUrl:@"https://liveguide01eu.netop.com/lg/engine/sources/swf.php?LiveGuideUID=lgW9JHrdb73ZwHkMd2Cg0b&myurl=Email&title=Email&LiveGuideCIDuration=&LiveGuideCIRef=&LiveGuideCITitle=&LiveGuideCIUrl="];
     [self.navigationController pushViewController:cvc animated:YES];
     
 }

@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkf-Xw-r1A">
-                    <rect key="frame" x="279" y="160" width="48" height="48"/>
+                    <rect key="frame" x="279" y="159" width="48" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="0Iz-rz-0jR"/>
                         <constraint firstAttribute="height" constant="48" id="ek4-T8-6to"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uq-Pd-mKD">
-                    <rect key="frame" x="219" y="160" width="48" height="48"/>
+                    <rect key="frame" x="219" y="159" width="48" height="48"/>
                     <state key="normal" image="chat_cirkel_gray_96.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -64,14 +64,14 @@
                         <constraint firstAttribute="height" constant="30" id="RiV-5c-Gom"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-Kz-aG8">
-                    <rect key="frame" x="159" y="128" width="414" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000007" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-Kz-aG8">
+                    <rect key="frame" x="159" y="126" width="414" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW2-rb-8EF">
-                    <rect key="frame" x="159" y="160" width="48" height="48"/>
+                    <rect key="frame" x="159" y="159" width="48" height="48"/>
                     <state key="normal" image="call_cirkel_gray_96.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -91,12 +91,18 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Background" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-0h-t2J">
+                    <rect key="frame" x="159" y="105" width="108" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ZkK-XY-C56" firstAttribute="top" secondItem="fRv-Ys-WzQ" secondAttribute="bottom" constant="20" id="0Bc-wN-qKC"/>
                 <constraint firstItem="IW2-rb-8EF" firstAttribute="top" secondItem="5Uq-Pd-mKD" secondAttribute="top" id="3r7-Nq-9Go"/>
-                <constraint firstItem="xiV-Kz-aG8" firstAttribute="top" secondItem="fRv-Ys-WzQ" secondAttribute="top" constant="23" id="79X-3j-X9Q"/>
+                <constraint firstItem="xiV-Kz-aG8" firstAttribute="top" secondItem="fRv-Ys-WzQ" secondAttribute="top" constant="21" id="79X-3j-X9Q"/>
                 <constraint firstItem="ZkK-XY-C56" firstAttribute="leading" secondItem="fRv-Ys-WzQ" secondAttribute="leading" id="D09-e2-Geu"/>
                 <constraint firstItem="IW2-rb-8EF" firstAttribute="leading" secondItem="xiV-Kz-aG8" secondAttribute="leading" id="JDU-S7-O5h"/>
                 <constraint firstItem="IW2-rb-8EF" firstAttribute="top" secondItem="xiV-Kz-aG8" secondAttribute="bottom" constant="12" id="KIb-sK-w56"/>

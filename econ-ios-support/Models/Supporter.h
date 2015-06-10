@@ -14,14 +14,13 @@
 @end
 
 @interface Supporter : JSONModel
-@property (strong, nonatomic)NSString *name;
-@property (strong, nonatomic)NSString *nickName;
-@property (strong, nonatomic)NSString *about;
-@property (strong, nonatomic)NSArray<NSString> *skills;
-@property (strong, nonatomic)NSString *image;
-@property (strong, nonatomic)NSString *background;
-@property (strong, nonatomic)NSString *country;
-@property (strong, nonatomic)NSString *initials;
+@property (strong, nonatomic)NSString<Optional> *name;
+@property (strong, nonatomic)NSString<Optional> *callname;
+@property (strong, nonatomic)NSString<Optional> *bio;
+@property (strong, nonatomic)NSArray<NSString, Optional> *skills;
+@property (strong, nonatomic)NSString<Optional> *education;
+@property (strong, nonatomic)NSString<Optional> *country;
+@property (strong, nonatomic)NSString<Optional> *initials;
 
 - (NSMutableAttributedString *)attributedStringForSkills;
 

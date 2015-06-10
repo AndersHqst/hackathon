@@ -10,7 +10,7 @@
 #import "UIColor+ECMColor.h"
 #import "ECMLib.h"
 #import "SupportsTableViewController.h"
-#import "ChatViewController.h"
+#import "StreamTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,13 +32,13 @@
     
     SupportsTableViewController *stvc = [[SupportsTableViewController alloc] init];
     
-    ECMNavigationController *chatnav = [[ECMNavigationController alloc] initWithNavigationBarClass:[ECMNavigationBar class] toolbarClass:[UIToolbar class]];
-    ChatViewController *cvc = [[ChatViewController alloc] init];
-    [chatnav pushViewController:cvc animated:NO];
+    ECMNavigationController *streamNav = [[ECMNavigationController alloc] initWithNavigationBarClass:[ECMNavigationBar class] toolbarClass:[UIToolbar class]];
+    StreamTableViewController *svc = [[StreamTableViewController alloc] init];
+    [streamNav pushViewController:svc animated:NO];
     
     ECMNavigationController *nav = [[ECMNavigationController alloc] initWithNavigationBarClass:[ECMNavigationBar class] toolbarClass:[UIToolbar class]];
     [nav pushViewController:stvc animated:YES];
-    self.tabarController.viewControllers = @[nav, chatnav];
+    self.tabarController.viewControllers = @[nav, streamNav];
     self.window.rootViewController = self.tabarController;
     
     
@@ -48,12 +48,12 @@
     UITabBarItem *tabbarItemStream = [[UITabBarItem alloc] initWithTitle:nil image:tap2 selectedImage:tap2];
     
     nav.tabBarItem = tabbarItemSupporters;
-    chatnav.tabBarItem = tabbarItemStream;
+    streamNav.tabBarItem = tabbarItemStream;
     
     // Magic top inset to position title-less tabbar icons
     float topInset = 5.0f;
     nav.tabBarItem.imageInsets = UIEdgeInsetsMake(topInset, 0.0f, -topInset, 0.0f);
-    chatnav.tabBarItem.imageInsets = UIEdgeInsetsMake(topInset, 0.0f, -topInset, 0.0f);
+    streamNav.tabBarItem.imageInsets = UIEdgeInsetsMake(topInset, 0.0f, -topInset, 0.0f);
     
     return YES;
 }

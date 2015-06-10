@@ -1,5 +1,5 @@
 //
-//  ChatViewController.h
+//  StreamTableViewController.h
 //  econ-ios-support
 //
 //  Created by Anders Høst Kjærgaard on 10/06/15.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Post.h"
 
-@interface ChatViewController : UIViewController<UIWebViewDelegate>
-- (id)initWithUrl:(NSString *)string;
-- (id)initWithPost:(Post *)post;
+@interface StreamTableViewController : UITableViewController
+
 @end

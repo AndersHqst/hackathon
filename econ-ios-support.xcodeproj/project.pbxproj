@@ -68,6 +68,12 @@
 		4C1A1F8A1B28B252004607E7 /* TEL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F661B28B252004607E7 /* TEL.jpg */; };
 		4C1A1F8B1B28B252004607E7 /* TJO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F671B28B252004607E7 /* TJO.jpg */; };
 		4C1A1F8C1B28B252004607E7 /* WRA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F681B28B252004607E7 /* WRA.jpg */; };
+		4C1A1F8F1B28B4E7004607E7 /* StreamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A1F8E1B28B4E7004607E7 /* StreamTableViewController.m */; };
+		4C1A1F921B28B507004607E7 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A1F911B28B507004607E7 /* Post.m */; };
+		4C1A1F951B28C295004607E7 /* StreamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A1F941B28C295004607E7 /* StreamTableViewCell.m */; };
+		4C1A1F971B28C2A4004607E7 /* StreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F961B28C2A4004607E7 /* StreamTableViewCell.xib */; };
+		4C1A1F9A1B28C3A6004607E7 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A1F991B28C3A6004607E7 /* NSDate+Additions.m */; };
+		4C1A1F9C1B28CDA5004607E7 /* planet_wow_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F9B1B28CDA5004607E7 /* planet_wow_splash.png */; };
 		B9BFD578931276570C918C3A /* libPods-econ-ios-support.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EDEDF913DF124D1AE6667B /* libPods-econ-ios-support.a */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +164,16 @@
 		4C1A1F661B28B252004607E7 /* TEL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TEL.jpg; path = Resources/heroes/TEL.jpg; sourceTree = "<group>"; };
 		4C1A1F671B28B252004607E7 /* TJO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TJO.jpg; path = Resources/heroes/TJO.jpg; sourceTree = "<group>"; };
 		4C1A1F681B28B252004607E7 /* WRA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = WRA.jpg; path = Resources/heroes/WRA.jpg; sourceTree = "<group>"; };
+		4C1A1F8D1B28B4E7004607E7 /* StreamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamTableViewController.h; path = Controllers/StreamTableViewController.h; sourceTree = "<group>"; };
+		4C1A1F8E1B28B4E7004607E7 /* StreamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreamTableViewController.m; path = Controllers/StreamTableViewController.m; sourceTree = "<group>"; };
+		4C1A1F901B28B507004607E7 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Models/Post.h; sourceTree = "<group>"; };
+		4C1A1F911B28B507004607E7 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Models/Post.m; sourceTree = "<group>"; };
+		4C1A1F931B28C295004607E7 /* StreamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamTableViewCell.h; path = Views/StreamTableViewCell.h; sourceTree = "<group>"; };
+		4C1A1F941B28C295004607E7 /* StreamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreamTableViewCell.m; path = Views/StreamTableViewCell.m; sourceTree = "<group>"; };
+		4C1A1F961B28C2A4004607E7 /* StreamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamTableViewCell.xib; sourceTree = "<group>"; };
+		4C1A1F981B28C3A6004607E7 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "Categories/NSDate+Additions.h"; sourceTree = "<group>"; };
+		4C1A1F991B28C3A6004607E7 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "Categories/NSDate+Additions.m"; sourceTree = "<group>"; };
+		4C1A1F9B1B28CDA5004607E7 /* planet_wow_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet_wow_splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +270,8 @@
 				4C1A1EC71B2831A7004607E7 /* SupportDetailViewController.m */,
 				4C1A1ECF1B2838D6004607E7 /* ChatViewController.h */,
 				4C1A1ED01B2838D6004607E7 /* ChatViewController.m */,
+				4C1A1F8D1B28B4E7004607E7 /* StreamTableViewController.h */,
+				4C1A1F8E1B28B4E7004607E7 /* StreamTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +281,8 @@
 			children = (
 				4C1A1ECA1B2831EE004607E7 /* Supporter.h */,
 				4C1A1ECB1B2831EE004607E7 /* Supporter.m */,
+				4C1A1F901B28B507004607E7 /* Post.h */,
+				4C1A1F911B28B507004607E7 /* Post.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -275,6 +295,9 @@
 				4C1A1ED61B283DEE004607E7 /* SupporterTableViewCell.m */,
 				4C1A1ED81B2841B4004607E7 /* SupportDetailView.xib */,
 				4C1A1EDA1B285CCA004607E7 /* NavigationNameView.xib */,
+				4C1A1F931B28C295004607E7 /* StreamTableViewCell.h */,
+				4C1A1F941B28C295004607E7 /* StreamTableViewCell.m */,
+				4C1A1F961B28C2A4004607E7 /* StreamTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,6 +315,7 @@
 				4C1A1EED1B287BFB004607E7 /* chat_cirkel_gray_96@2x.png */,
 				4C1A1EEE1B287BFB004607E7 /* mail_cirkel_gray_96@2x.png */,
 				4C1A1EDD1B286796004607E7 /* agent_gray_resized.png */,
+				4C1A1F9B1B28CDA5004607E7 /* planet_wow_splash.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -301,6 +325,8 @@
 			children = (
 				4C1A1EE71B287A4D004607E7 /* UIImageView+CircularImage.h */,
 				4C1A1EE81B287A4D004607E7 /* UIImageView+CircularImage.m */,
+				4C1A1F981B28C3A6004607E7 /* NSDate+Additions.h */,
+				4C1A1F991B28C3A6004607E7 /* NSDate+Additions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -478,6 +504,7 @@
 				4C1A1F7D1B28B252004607E7 /* MHB.png in Resources */,
 				4C1A1F721B28B252004607E7 /* DDR.jpg in Resources */,
 				4C1A1F7C1B28B252004607E7 /* LSO.jpg in Resources */,
+				4C1A1F971B28C2A4004607E7 /* StreamTableViewCell.xib in Resources */,
 				4C1A1F831B28B252004607E7 /* RBA.png in Resources */,
 				4C1A1F7A1B28B252004607E7 /* LHM.jpg in Resources */,
 				4C1A1F8C1B28B252004607E7 /* WRA.jpg in Resources */,
@@ -493,6 +520,7 @@
 				4C1A1ED91B2841B4004607E7 /* SupportDetailView.xib in Resources */,
 				4C1A1F8A1B28B252004607E7 /* TEL.jpg in Resources */,
 				4C1A1EEF1B287BFB004607E7 /* call_cirkel_gray_96@2x.png in Resources */,
+				4C1A1F9C1B28CDA5004607E7 /* planet_wow_splash.png in Resources */,
 				4C1A1F751B28B252004607E7 /* HLI.jpg in Resources */,
 				4C1A1EAA1B282B8D004607E7 /* Images.xcassets in Resources */,
 				4C1A1EDB1B285CCA004607E7 /* NavigationNameView.xib in Resources */,
@@ -556,7 +584,11 @@
 				4C1A1E9F1B282B8D004607E7 /* main.m in Sources */,
 				4C1A1EC51B282EBD004607E7 /* SupportsTableViewController.m in Sources */,
 				4C1A1ED11B2838D6004607E7 /* ChatViewController.m in Sources */,
+				4C1A1F921B28B507004607E7 /* Post.m in Sources */,
 				4C1A1EC81B2831A7004607E7 /* SupportDetailViewController.m in Sources */,
+				4C1A1F8F1B28B4E7004607E7 /* StreamTableViewController.m in Sources */,
+				4C1A1F9A1B28C3A6004607E7 /* NSDate+Additions.m in Sources */,
+				4C1A1F951B28C295004607E7 /* StreamTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

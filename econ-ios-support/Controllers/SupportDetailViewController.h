@@ -25,4 +25,6 @@
 - (IBAction)callButtonClick:(id)sender;
 - (IBAction)chatButtonClick:(id)sender;
 - (IBAction)mailButtonClick:(id)sender;
+
++ (UIImage *)supporterFlag:(Supporter *)supporter;
 @end
