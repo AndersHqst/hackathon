@@ -13,62 +13,6 @@
 #import "UIView+HUD.h"
 #import "UIImageView+CircularImage.h"
 
-@interface MyLayoutManager : NSLayoutManager
-@end
-
-@implementation MyLayoutManager
-- (void)fillBackgroundRectArray:(const CGRect *)rectArray count:(NSUInteger)rectCount forCharacterRange:(NSRange)charRange color:(UIColor *)color
-{
-    CGFloat halfLineWidth = 3.; // change this to change corners radius
-    
-    CGMutablePathRef path = CGPathCreateMutable();
-    
-    if (rectCount == 1
-        || (rectCount == 2 && (CGRectGetMaxX(rectArray[1]) < CGRectGetMinX(rectArray[0])))
-        )
-    {
-        // 1 rect or 2 rects without edges in contact
-        
-        CGRect rect = rectArray[0];
-        CGRect box = CGRectMake(rect.origin.x, rect.origin.y+7, rect.size.width, rect.size.height-7);
-        CGPathAddRect(path, NULL, CGRectInset(box, halfLineWidth, halfLineWidth));
-        if (rectCount == 2)
-            CGPathAddRect(path, NULL, CGRectInset(rectArray[1], halfLineWidth, halfLineWidth));
-    }
-    else
-    {
-        // 2 or 3 rects
-        NSUInteger lastRect = rectCount - 1;
-        
-        CGPathMoveToPoint(path, NULL, CGRectGetMinX(rectArray[0]) + halfLineWidth, CGRectGetMaxY(rectArray[0]) + halfLineWidth);
-        
-        CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rectArray[0]) + halfLineWidth, CGRectGetMinY(rectArray[0]) + halfLineWidth);
-        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[0]) - halfLineWidth, CGRectGetMinY(rectArray[0]) + halfLineWidth);
-        
-        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[0]) - halfLineWidth, CGRectGetMinY(rectArray[lastRect]) - halfLineWidth);
-        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[lastRect]) - halfLineWidth, CGRectGetMinY(rectArray[lastRect]) - halfLineWidth);
-        
-        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[lastRect]) - halfLineWidth, CGRectGetMaxY(rectArray[lastRect]) - halfLineWidth);
-        CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rectArray[lastRect]) + halfLineWidth, CGRectGetMaxY(rectArray[lastRect]) - halfLineWidth);
-        
-        CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rectArray[lastRect]) + halfLineWidth, CGRectGetMaxY(rectArray[0]) + halfLineWidth);
-        
-        CGPathCloseSubpath(path);
-    }
-    
-    [color set]; // set fill and stroke color
-    
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(ctx, halfLineWidth * 3.);
-    CGContextSetLineJoin(ctx, kCGLineJoinRound);
-    
-    CGContextAddPath(ctx, path);
-    CGPathRelease(path);
-    
-    CGContextDrawPath(ctx, kCGPathFillStroke);
-}
-@end
-
 @interface SupportDetailViewController ()
 @property (nonatomic, strong)Supporter *supporter;
 @property (nonatomic, strong)MFMailComposeViewController *mailController;
@@ -85,65 +29,30 @@
     return self;
 }
 
-- (void)addSkillLabels {
-    
-//    NSString *skills = self.supporter.skills;
-//    // setup text handling
-//    NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:skills];
-//    
-//    // use our subclass of NSLayoutManager
-//    MyLayoutManager *textLayout = [[MyLayoutManager alloc] init];
-//    
-//    [textStorage addLayoutManager:textLayout];
-//    
-//    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:self.view.bounds.size];
-//    
-//    [textLayout addTextContainer:textContainer];
-//    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0,20,self.view.bounds.size.width,self.view.bounds.size.height-20)
-//                                               textContainer:textContainer];
-//    textView.editable = YES;
-//    textView.selectable = YES;
-//    textView.font = [UIFont systemFontOfSize:20];
-//    textView.textColor = [UIColor blackColor];
-//    textView.contentInset = UIEdgeInsetsMake(-8,0,0,0);
-//    textView.editable = NO;
-//    textView.selectable = NO;
-//    
-//    [self.view addSubview:textView];
-//    
-//    [textView mas_makeConstraints:^(MASConstraintMaker *make){
-//        make.left.equalTo(self.profileImageView.mas_right).offset(10);
-//        make.top.equalTo(self.profileImageView.mas_top);
-//        make.bottom.equalTo(self.profileImageView.mas_bottom);
-//        make.right.equalTo(self.view).offset(10);
-//    }];
-//    
-//    NSArray *skillsArray = [skills componentsSeparatedByString:@" "];
-//    for(NSString *skill in skillsArray) {
-//        NSRange range = [self.supporter.skills rangeOfString:skill];
-//        [textView.textStorage setAttributes:[NSDictionary dictionaryWithObject:[UIColor ecm_orange] forKey:NSBackgroundColorAttributeName] range:range];
-//    }
-    
-}
-
 - (void)setNavigationTitleView {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 40)];
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 20)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
     nameLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:20.0];
+    nameLabel.text = self.supporter.name;
+    [nameLabel sizeToFit];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     
-    UILabel *nickNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 150, 20)];
+    CGPoint nameCenter = CGPointMake(view.center.x, nameLabel.center.y);
+    nameLabel.center = nameCenter;
+    
+    UILabel *nickNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, nameLabel.frame.size.height, 200, 20)];
+    nickNameLabel.text = [NSString stringWithFormat:@"\"%@\"", self.supporter.nickName];
     nickNameLabel.textAlignment = NSTextAlignmentCenter;
     nickNameLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:12.0];
     nickNameLabel.textColor = [UIColor grayColor];
+    [nickNameLabel sizeToFit];
+    CGPoint nickCenter = CGPointMake(view.center.x, nickNameLabel.center.y);
+    nickNameLabel.center = nickCenter;
     
-    nameLabel.text = self.supporter.name;
-    nickNameLabel.text = [NSString stringWithFormat:@"\"%@\"", self.supporter.nickName];
+    [view sizeToFit];
     
     [view addSubview:nameLabel];
     [view addSubview:nickNameLabel];
-    
-    [self addSkillLabels];
     
     self.navigationItem.titleView = view;
 }
@@ -151,6 +60,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.profileImageView setCircularProfileImage];
+    
+//    self.scrollView = (UIScrollView *)[[NSBundle mainBundle] loadNibNamed:@"SupportDetailView" owner:self options:nil][0];
+//        self.scrollView.frame = CGRectMake(0, 0, 320, 500);
+//        self.scrollView.contentSize = CGSizeMake(320, 500);
+//    [self.view addSubview:self.scrollView];
+    
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.hidesBackButton = YES;
@@ -175,6 +90,7 @@
     self.aboutLabel.text = self.supporter.about;
     self.backgroundLabel.text = self.supporter.background;
     self.flagImageView.image = [self supporterImage];
+    self.skillsLabel.attributedText = [self.supporter attributedStringForSkills];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -184,14 +100,14 @@
 
 - (UIImage *)supporterImage {
     if([self.supporter.country isEqualToString:@"se"]) {
-        return [UIImage imageNamed:@"danish falg"];
+        return [UIImage imageNamed:@"Sweden"];
     } else if([self.supporter.country isEqualToString:@"fi"]) {
-        return [UIImage imageNamed:@"danish falg"];
+        return [UIImage imageNamed:@"Finland"];
     } else if([self.supporter.country isEqualToString:@"no"]) {
-        return [UIImage imageNamed:@"danish falg"];
+        return [UIImage imageNamed:@"Norway"];
     }
     // default
-    return [UIImage imageNamed:@"danish falg"];
+    return [UIImage imageNamed:@"Denmark"];
 }
 
 #pragma mark - Actions

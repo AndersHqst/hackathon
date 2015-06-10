@@ -7,6 +7,8 @@
 //
 
 #import "JSONModel.h"
+#import <UIKit/UIKit.h>
+#import "ECMLib.h"
 
 @protocol NSString <NSObject>
 @end
@@ -19,4 +21,7 @@
 @property (strong, nonatomic)NSString *image;
 @property (strong, nonatomic)NSString *background;
 @property (strong, nonatomic)NSString *country;
+
+- (NSMutableAttributedString *)attributedStringForSkills;
+
 @end

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -22,38 +23,51 @@
                         </mask>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="100" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-d6-trS">
-                    <rect key="frame" x="161" y="22" width="431" height="53"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Expertise" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-7d-eQk">
-                    <rect key="frame" x="161" y="85" width="431" height="53"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1" misplaced="YES" text="Expertise" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-7d-eQk">
+                    <rect key="frame" x="161" y="46" width="431" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="500" constant="74" id="adX-A2-VVv"/>
-                        <constraint firstAttribute="width" constant="431" id="gOO-w1-0RS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="adX-A2-VVv"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-d6-trS">
+                    <rect key="frame" x="161" y="8" width="431" height="31"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="6QB-d6-trS" firstAttribute="top" secondItem="dBO-KM-4to" secondAttribute="top" id="69G-sO-5Sj"/>
                 <constraint firstItem="dBO-KM-4to" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="BhF-Tx-ybA"/>
+                <constraint firstItem="Aux-7d-eQk" firstAttribute="top" secondItem="6QB-d6-trS" secondAttribute="bottom" id="IPZ-1A-aJq"/>
                 <constraint firstItem="dBO-KM-4to" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="KLx-si-my1"/>
-                <constraint firstItem="Aux-7d-eQk" firstAttribute="bottom" secondItem="dBO-KM-4to" secondAttribute="bottom" id="Kdd-h1-ond"/>
-                <constraint firstAttribute="trailing" secondItem="Aux-7d-eQk" secondAttribute="trailing" constant="8" id="KzF-4J-elC"/>
-                <constraint firstItem="Aux-7d-eQk" firstAttribute="leading" secondItem="6QB-d6-trS" secondAttribute="leading" id="M4w-MW-fJ7"/>
+                <constraint firstItem="Aux-7d-eQk" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="KXa-RC-FLy"/>
                 <constraint firstItem="6QB-d6-trS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="PJu-mM-ka2"/>
                 <constraint firstItem="Aux-7d-eQk" firstAttribute="height" secondItem="6QB-d6-trS" secondAttribute="height" id="TL4-ly-G70"/>
-                <constraint firstItem="6QB-d6-trS" firstAttribute="leading" secondItem="dBO-KM-4to" secondAttribute="trailing" constant="24" id="UGt-T2-Bly"/>
-                <constraint firstItem="Aux-7d-eQk" firstAttribute="top" secondItem="6QB-d6-trS" secondAttribute="bottom" constant="10" id="Vfn-Ys-Rsp"/>
+                <constraint firstItem="dBO-KM-4to" firstAttribute="top" secondItem="6QB-d6-trS" secondAttribute="top" id="VRw-l8-kLx"/>
+                <constraint firstItem="Aux-7d-eQk" firstAttribute="trailing" secondItem="6QB-d6-trS" secondAttribute="trailing" id="Xx0-oG-X3d"/>
+                <constraint firstItem="Aux-7d-eQk" firstAttribute="leading" secondItem="dBO-KM-4to" secondAttribute="trailing" constant="24" id="aD4-oy-aEQ"/>
+                <constraint firstAttribute="bottom" secondItem="Aux-7d-eQk" secondAttribute="bottom" constant="84" id="cQi-dV-fFz"/>
                 <constraint firstAttribute="bottom" secondItem="dBO-KM-4to" secondAttribute="bottom" constant="9" id="iaH-Ec-AaA"/>
-                <constraint firstAttribute="trailing" secondItem="6QB-d6-trS" secondAttribute="trailing" constant="8" id="rSA-Fo-sgC"/>
+                <constraint firstItem="Aux-7d-eQk" firstAttribute="leading" secondItem="6QB-d6-trS" secondAttribute="leading" id="jgd-eN-Odb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="PJu-mM-ka2"/>
+                    <exclude reference="TL4-ly-G70"/>
+                    <exclude reference="cQi-dV-fFz"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="image" destination="dBO-KM-4to" id="VXN-NS-bb5"/>
                 <outlet property="nameLabel" destination="6QB-d6-trS" id="1Dv-tI-kOV"/>
