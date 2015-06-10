@@ -14,4 +14,5 @@
 @property (nonatomic, strong)NSString<Optional> *author;
 @property (nonatomic, strong)NSString<Optional> *link;
 @property (nonatomic, strong)NSString<Optional> *desc;
+@property (nonatomic, strong)NSString<Optional> *type; //blog|facebook
 @end
