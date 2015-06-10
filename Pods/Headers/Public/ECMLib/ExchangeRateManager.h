@@ -1,0 +1,1 @@
+../../../../../econ-ios-lib/ECMLib/Api/ExchangeRateManager.h

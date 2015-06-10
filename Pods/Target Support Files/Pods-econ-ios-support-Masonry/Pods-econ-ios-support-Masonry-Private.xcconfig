@@ -1,0 +1,6 @@
+#include "Pods-econ-ios-support-Masonry.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Masonry" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/CocoaSecurity" "${PODS_ROOT}/Headers/Public/CupertinoYankee" "${PODS_ROOT}/Headers/Public/ECMLib" "${PODS_ROOT}/Headers/Public/JSONModel" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/NSUserDefaults+SevenSecurityLayers" "${PODS_ROOT}/Headers/Public/PSPDFTextView" "${PODS_ROOT}/Headers/Public/SWTableViewCell" "${PODS_ROOT}/Headers/Public/UIAlertView+Blocks"
+OTHER_LDFLAGS = ${PODS_ECON_IOS_SUPPORT_MASONRY_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

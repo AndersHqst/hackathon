@@ -1,0 +1,54 @@
+{
+  "name": "ECMLib",
+  "version": "0.0.1",
+  "summary": "Shared library for e-conomic iOS apps.",
+  "homepage": "https://github.com/e-conomic/econ-ios-lib",
+  "license": "MIT",
+  "authors": {
+    "ahkj": "ahkj@e-conomic.com"
+  },
+  "source": {
+    "git": "https://github.com/e-conomic/econ-ios-lib.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "7.1"
+  },
+  "requires_arc": true,
+  "source_files": "ECMLib/**/*.{h,m}",
+  "ios": {
+    "resource_bundles": {
+      "ECMLib": "ECMLib/LibImages.xcassets"
+    }
+  },
+  "module_name": "ECMLib",
+  "dependencies": {
+    "CocoaSecurity": [
+
+    ],
+    "CupertinoYankee": [
+
+    ],
+    "NSUserDefaults+SevenSecurityLayers": [
+
+    ],
+    "AFNetworking": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "PSPDFTextView": [
+
+    ],
+    "SWTableViewCell": [
+
+    ],
+    "UIAlertView+Blocks": [
+
+    ],
+    "JSONModel": [
+
+    ]
+  }
+}
