@@ -83,8 +83,14 @@
     
     cell.dateLabel.attributedText = attr;
     
-    NSMutableAttributedString *authorString = [[NSMutableAttributedString alloc] initWithString:post.author];
-    [authorString addAttribute:NSForegroundColorAttributeName value:[UIColor ecm_blue] range:NSMakeRange(0, post.author.length)];
+    NSString *postType = nil;
+    if([post.type isEqualToString:@"facebook"]){
+        postType = @"facebook";
+    } else {
+        postType = @"blog";
+    }
+    NSMutableAttributedString *authorString = [[NSMutableAttributedString alloc] initWithString:postType];
+    [authorString addAttribute:NSForegroundColorAttributeName value:[UIColor ecm_blue] range:NSMakeRange(0, postType.length)];
     cell.authorLabel.attributedText = authorString;
     NSString *text = nil;
     if(post.title.length < 110) {

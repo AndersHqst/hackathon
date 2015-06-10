@@ -28,7 +28,7 @@
                         <constraint firstAttribute="width" constant="48" id="0Iz-rz-0jR"/>
                         <constraint firstAttribute="height" constant="48" id="ek4-T8-6to"/>
                     </constraints>
-                    <state key="normal" image="mail_cirkel_gray_96.png">
+                    <state key="normal" image="mail_cirkel_orange.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -37,7 +37,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uq-Pd-mKD">
                     <rect key="frame" x="219" y="159" width="48" height="48"/>
-                    <state key="normal" image="chat_cirkel_gray_96.png">
+                    <state key="normal" image="chat_cirkel_blue.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -72,7 +72,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW2-rb-8EF">
                     <rect key="frame" x="159" y="159" width="48" height="48"/>
-                    <state key="normal" image="call_cirkel_gray_96.png">
+                    <state key="normal" image="call_cirkel_green.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -127,12 +127,12 @@
                     <exclude reference="vW9-DX-q7A"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="2011" y="824"/>
+            <point key="canvasLocation" x="1310" y="513"/>
         </view>
     </objects>
     <resources>
-        <image name="call_cirkel_gray_96.png" width="48" height="48"/>
-        <image name="chat_cirkel_gray_96.png" width="48" height="48"/>
-        <image name="mail_cirkel_gray_96.png" width="48" height="48"/>
+        <image name="call_cirkel_green.png" width="48" height="48"/>
+        <image name="chat_cirkel_blue.png" width="48" height="48"/>
+        <image name="mail_cirkel_orange.png" width="48" height="48"/>
     </resources>
 </document>

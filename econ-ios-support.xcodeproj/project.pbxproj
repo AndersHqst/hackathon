@@ -74,6 +74,10 @@
 		4C1A1F971B28C2A4004607E7 /* StreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F961B28C2A4004607E7 /* StreamTableViewCell.xib */; };
 		4C1A1F9A1B28C3A6004607E7 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A1F991B28C3A6004607E7 /* NSDate+Additions.m */; };
 		4C1A1F9C1B28CDA5004607E7 /* planet_wow_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F9B1B28CDA5004607E7 /* planet_wow_splash.png */; };
+		4C1A1F9E1B28E12D004607E7 /* call_cirkel_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F9D1B28E12D004607E7 /* call_cirkel_green@2x.png */; };
+		4C1A1FA01B28E31A004607E7 /* chat_cirkel_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1F9F1B28E31A004607E7 /* chat_cirkel_blue@2x.png */; };
+		4C1A1FA21B28E32C004607E7 /* mail_cirkel_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1FA11B28E32C004607E7 /* mail_cirkel_orange@2x.png */; };
+		4C1A1FA41B28E37E004607E7 /* MLN.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1FA31B28E37E004607E7 /* MLN.png */; };
 		B9BFD578931276570C918C3A /* libPods-econ-ios-support.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EDEDF913DF124D1AE6667B /* libPods-econ-ios-support.a */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +178,10 @@
 		4C1A1F981B28C3A6004607E7 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "Categories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		4C1A1F991B28C3A6004607E7 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "Categories/NSDate+Additions.m"; sourceTree = "<group>"; };
 		4C1A1F9B1B28CDA5004607E7 /* planet_wow_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet_wow_splash.png; sourceTree = "<group>"; };
+		4C1A1F9D1B28E12D004607E7 /* call_cirkel_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_cirkel_green@2x.png"; sourceTree = "<group>"; };
+		4C1A1F9F1B28E31A004607E7 /* chat_cirkel_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_cirkel_blue@2x.png"; sourceTree = "<group>"; };
+		4C1A1FA11B28E32C004607E7 /* mail_cirkel_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail_cirkel_orange@2x.png"; sourceTree = "<group>"; };
+		4C1A1FA31B28E37E004607E7 /* MLN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MLN.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,12 +318,15 @@
 				4C1A1EF71B288FFB004607E7 /* Finland.png */,
 				4C1A1EF81B288FFB004607E7 /* Norway.png */,
 				4C1A1EF91B288FFB004607E7 /* Sweden.png */,
+				4C1A1F9D1B28E12D004607E7 /* call_cirkel_green@2x.png */,
 				4C1A1EEB1B287BFB004607E7 /* call_cirkel_gray_96@2x.png */,
 				4C1A1EEC1B287BFB004607E7 /* callback_cirkel_gray_96@2x.png */,
 				4C1A1EED1B287BFB004607E7 /* chat_cirkel_gray_96@2x.png */,
 				4C1A1EEE1B287BFB004607E7 /* mail_cirkel_gray_96@2x.png */,
 				4C1A1EDD1B286796004607E7 /* agent_gray_resized.png */,
 				4C1A1F9B1B28CDA5004607E7 /* planet_wow_splash.png */,
+				4C1A1F9F1B28E31A004607E7 /* chat_cirkel_blue@2x.png */,
+				4C1A1FA11B28E32C004607E7 /* mail_cirkel_orange@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -334,6 +345,7 @@
 		4C1A1EFE1B28B198004607E7 /* heroes */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A1FA31B28E37E004607E7 /* MLN.png */,
 				4C1A1F451B28B252004607E7 /* AHK.jpg */,
 				4C1A1F461B28B252004607E7 /* ANP.jpg */,
 				4C1A1F471B28B252004607E7 /* ATV.jpg */,
@@ -486,8 +498,12 @@
 				4C1A1F6C1B28B252004607E7 /* CHO.jpg in Resources */,
 				4C1A1F791B28B252004607E7 /* JSV.jpg in Resources */,
 				4C1A1EF01B287BFB004607E7 /* callback_cirkel_gray_96@2x.png in Resources */,
+				4C1A1FA21B28E32C004607E7 /* mail_cirkel_orange@2x.png in Resources */,
 				4C1A1EAD1B282B8D004607E7 /* LaunchScreen.xib in Resources */,
+				4C1A1FA41B28E37E004607E7 /* MLN.png in Resources */,
 				4C1A1EF11B287BFB004607E7 /* chat_cirkel_gray_96@2x.png in Resources */,
+				4C1A1FA01B28E31A004607E7 /* chat_cirkel_blue@2x.png in Resources */,
+				4C1A1F9E1B28E12D004607E7 /* call_cirkel_green@2x.png in Resources */,
 				4C1A1F701B28B252004607E7 /* COL.png in Resources */,
 				4C1A1F811B28B252004607E7 /* PBO.jpg in Resources */,
 				4C1A1EFD1B288FFB004607E7 /* Sweden.png in Resources */,
