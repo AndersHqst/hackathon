@@ -8,6 +8,7 @@
 
 #import "SupporterTableViewCell.h"
 #import <Masonry.h>
+#import "UIImageView+CircularImage.h"
 
 @implementation SupporterTableViewCell
 
@@ -18,7 +19,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
-    // Configure the view for the selected state
+    [self.image setCircularProfileImage];
 }
 
 @end

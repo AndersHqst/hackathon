@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B92BF667-29F7-4E19-B685-1D2E5EE10FF1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>econ-ios-support</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1365AC2F79AC92883E29B9472F9087F0519C73B5</key>
+		<string>github.com:e-conomic/econ-ios-lib.git</string>
+		<key>C864D5AF3113AC45955CDBCE72B2EAAEA1FEDF5A</key>
+		<string>github.com:AndersHqst/hackathon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>econ-ios-support.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1365AC2F79AC92883E29B9472F9087F0519C73B5</key>
+		<string>../../econ-ios-lib</string>
+		<key>C864D5AF3113AC45955CDBCE72B2EAAEA1FEDF5A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:AndersHqst/hackathon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C864D5AF3113AC45955CDBCE72B2EAAEA1FEDF5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1365AC2F79AC92883E29B9472F9087F0519C73B5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>econ-ios-lib</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C864D5AF3113AC45955CDBCE72B2EAAEA1FEDF5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>econ-ios-support</string>
+		</dict>
+	</array>
+</dict>
+</plist>

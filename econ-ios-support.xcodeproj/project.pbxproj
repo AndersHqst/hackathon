@@ -23,6 +23,11 @@
 		4C1A1ED91B2841B4004607E7 /* SupportDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1ED81B2841B4004607E7 /* SupportDetailView.xib */; };
 		4C1A1EDB1B285CCA004607E7 /* NavigationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1EDA1B285CCA004607E7 /* NavigationNameView.xib */; };
 		4C1A1EDE1B286796004607E7 /* agent_gray_resized.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1EDD1B286796004607E7 /* agent_gray_resized.png */; };
+		4C1A1EE91B287A4D004607E7 /* UIImageView+CircularImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A1EE81B287A4D004607E7 /* UIImageView+CircularImage.m */; };
+		4C1A1EEF1B287BFB004607E7 /* call_cirkel_gray_96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1EEB1B287BFB004607E7 /* call_cirkel_gray_96@2x.png */; };
+		4C1A1EF01B287BFB004607E7 /* callback_cirkel_gray_96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1EEC1B287BFB004607E7 /* callback_cirkel_gray_96@2x.png */; };
+		4C1A1EF11B287BFB004607E7 /* chat_cirkel_gray_96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1EED1B287BFB004607E7 /* chat_cirkel_gray_96@2x.png */; };
+		4C1A1EF21B287BFB004607E7 /* mail_cirkel_gray_96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A1EEE1B287BFB004607E7 /* mail_cirkel_gray_96@2x.png */; };
 		B9BFD578931276570C918C3A /* libPods-econ-ios-support.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EDEDF913DF124D1AE6667B /* libPods-econ-ios-support.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,12 @@
 		4C1A1ED81B2841B4004607E7 /* SupportDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SupportDetailView.xib; path = Views/SupportDetailView.xib; sourceTree = "<group>"; };
 		4C1A1EDA1B285CCA004607E7 /* NavigationNameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationNameView.xib; sourceTree = "<group>"; };
 		4C1A1EDD1B286796004607E7 /* agent_gray_resized.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agent_gray_resized.png; sourceTree = "<group>"; };
+		4C1A1EE71B287A4D004607E7 /* UIImageView+CircularImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+CircularImage.h"; path = "Categories/UIImageView+CircularImage.h"; sourceTree = "<group>"; };
+		4C1A1EE81B287A4D004607E7 /* UIImageView+CircularImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+CircularImage.m"; path = "Categories/UIImageView+CircularImage.m"; sourceTree = "<group>"; };
+		4C1A1EEB1B287BFB004607E7 /* call_cirkel_gray_96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_cirkel_gray_96@2x.png"; sourceTree = "<group>"; };
+		4C1A1EEC1B287BFB004607E7 /* callback_cirkel_gray_96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callback_cirkel_gray_96@2x.png"; sourceTree = "<group>"; };
+		4C1A1EED1B287BFB004607E7 /* chat_cirkel_gray_96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_cirkel_gray_96@2x.png"; sourceTree = "<group>"; };
+		4C1A1EEE1B287BFB004607E7 /* mail_cirkel_gray_96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail_cirkel_gray_96@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +123,7 @@
 		4C1A1E9B1B282B8D004607E7 /* econ-ios-support */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A1EEA1B287A55004607E7 /* Categories */,
 				4C1A1EDC1B286776004607E7 /* Resources */,
 				4C1A1ED21B283D5E004607E7 /* Views */,
 				4C1A1EC91B2831C6004607E7 /* Models */,
@@ -190,9 +202,22 @@
 		4C1A1EDC1B286776004607E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A1EEB1B287BFB004607E7 /* call_cirkel_gray_96@2x.png */,
+				4C1A1EEC1B287BFB004607E7 /* callback_cirkel_gray_96@2x.png */,
+				4C1A1EED1B287BFB004607E7 /* chat_cirkel_gray_96@2x.png */,
+				4C1A1EEE1B287BFB004607E7 /* mail_cirkel_gray_96@2x.png */,
 				4C1A1EDD1B286796004607E7 /* agent_gray_resized.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		4C1A1EEA1B287A55004607E7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4C1A1EE71B287A4D004607E7 /* UIImageView+CircularImage.h */,
+				4C1A1EE81B287A4D004607E7 /* UIImageView+CircularImage.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		EB6DEE4B49241F33B16DF6A6 /* Frameworks */ = {
@@ -294,11 +319,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1A1EF21B287BFB004607E7 /* mail_cirkel_gray_96@2x.png in Resources */,
 				4C1A1ECE1B28373A004607E7 /* LibImages.xcassets in Resources */,
 				4C1A1EDE1B286796004607E7 /* agent_gray_resized.png in Resources */,
+				4C1A1EF01B287BFB004607E7 /* callback_cirkel_gray_96@2x.png in Resources */,
 				4C1A1EAD1B282B8D004607E7 /* LaunchScreen.xib in Resources */,
+				4C1A1EF11B287BFB004607E7 /* chat_cirkel_gray_96@2x.png in Resources */,
 				4C1A1ED41B283D81004607E7 /* SupporterTableViewCell.xib in Resources */,
 				4C1A1ED91B2841B4004607E7 /* SupportDetailView.xib in Resources */,
+				4C1A1EEF1B287BFB004607E7 /* call_cirkel_gray_96@2x.png in Resources */,
 				4C1A1EAA1B282B8D004607E7 /* Images.xcassets in Resources */,
 				4C1A1EDB1B285CCA004607E7 /* NavigationNameView.xib in Resources */,
 			);
@@ -354,6 +383,7 @@
 				4C1A1ECC1B2831EE004607E7 /* Supporter.m in Sources */,
 				4C1A1EA51B282B8D004607E7 /* ViewController.m in Sources */,
 				4C1A1ED71B283DEE004607E7 /* SupporterTableViewCell.m in Sources */,
+				4C1A1EE91B287A4D004607E7 /* UIImageView+CircularImage.m in Sources */,
 				4C1A1EA21B282B8D004607E7 /* AppDelegate.m in Sources */,
 				4C1A1E9F1B282B8D004607E7 /* main.m in Sources */,
 				4C1A1EC51B282EBD004607E7 /* SupportsTableViewController.m in Sources */,

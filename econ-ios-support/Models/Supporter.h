@@ -8,10 +8,15 @@
 
 #import "JSONModel.h"
 
+@protocol NSString <NSObject>
+@end
+
 @interface Supporter : JSONModel
 @property (strong, nonatomic)NSString *name;
 @property (strong, nonatomic)NSString *nickName;
 @property (strong, nonatomic)NSString *about;
-@property (strong, nonatomic)NSString *skills;
+@property (strong, nonatomic)NSArray<NSString> *skills;
 @property (strong, nonatomic)NSString *image;
+@property (strong, nonatomic)NSString *background;
+@property (strong, nonatomic)NSString *country;
 @end

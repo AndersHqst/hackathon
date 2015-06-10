@@ -11,6 +11,7 @@
 #import "ChatViewController.h"
 #import <Masonry.h>
 #import "UIView+HUD.h"
+#import "UIImageView+CircularImage.h"
 
 @interface MyLayoutManager : NSLayoutManager
 @end
@@ -86,42 +87,42 @@
 
 - (void)addSkillLabels {
     
-    NSString *skills = self.supporter.skills;
-    // setup text handling
-    NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:skills];
-    
-    // use our subclass of NSLayoutManager
-    MyLayoutManager *textLayout = [[MyLayoutManager alloc] init];
-    
-    [textStorage addLayoutManager:textLayout];
-    
-    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:self.view.bounds.size];
-    
-    [textLayout addTextContainer:textContainer];
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0,20,self.view.bounds.size.width,self.view.bounds.size.height-20)
-                                               textContainer:textContainer];
-    textView.editable = YES;
-    textView.selectable = YES;
-    textView.font = [UIFont systemFontOfSize:20];
-    textView.textColor = [UIColor blackColor];
-    textView.contentInset = UIEdgeInsetsMake(-8,0,0,0);
-    textView.editable = NO;
-    textView.selectable = NO;
-    
-    [self.view addSubview:textView];
-    
-    [textView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.left.equalTo(self.profileImageView.mas_right);
-        make.top.equalTo(self.profileImageView.mas_top);
-        make.bottom.equalTo(self.profileImageView.mas_bottom);
-        make.right.equalTo(self.view).offset(20);
-    }];
-    
-    NSArray *skillsArray = [skills componentsSeparatedByString:@" "];
-    for(NSString *skill in skillsArray) {
-        NSRange range = [self.supporter.skills rangeOfString:skill];
-        [textView.textStorage setAttributes:[NSDictionary dictionaryWithObject:[UIColor ecm_orange] forKey:NSBackgroundColorAttributeName] range:range];
-    }
+//    NSString *skills = self.supporter.skills;
+//    // setup text handling
+//    NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:skills];
+//    
+//    // use our subclass of NSLayoutManager
+//    MyLayoutManager *textLayout = [[MyLayoutManager alloc] init];
+//    
+//    [textStorage addLayoutManager:textLayout];
+//    
+//    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:self.view.bounds.size];
+//    
+//    [textLayout addTextContainer:textContainer];
+//    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0,20,self.view.bounds.size.width,self.view.bounds.size.height-20)
+//                                               textContainer:textContainer];
+//    textView.editable = YES;
+//    textView.selectable = YES;
+//    textView.font = [UIFont systemFontOfSize:20];
+//    textView.textColor = [UIColor blackColor];
+//    textView.contentInset = UIEdgeInsetsMake(-8,0,0,0);
+//    textView.editable = NO;
+//    textView.selectable = NO;
+//    
+//    [self.view addSubview:textView];
+//    
+//    [textView mas_makeConstraints:^(MASConstraintMaker *make){
+//        make.left.equalTo(self.profileImageView.mas_right).offset(10);
+//        make.top.equalTo(self.profileImageView.mas_top);
+//        make.bottom.equalTo(self.profileImageView.mas_bottom);
+//        make.right.equalTo(self.view).offset(10);
+//    }];
+//    
+//    NSArray *skillsArray = [skills componentsSeparatedByString:@" "];
+//    for(NSString *skill in skillsArray) {
+//        NSRange range = [self.supporter.skills rangeOfString:skill];
+//        [textView.textStorage setAttributes:[NSDictionary dictionaryWithObject:[UIColor ecm_orange] forKey:NSBackgroundColorAttributeName] range:range];
+//    }
     
 }
 
@@ -149,6 +150,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.profileImageView setCircularProfileImage];
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.hidesBackButton = YES;
@@ -171,11 +173,25 @@
     });
     
     self.aboutLabel.text = self.supporter.about;
+    self.backgroundLabel.text = self.supporter.background;
+    self.flagImageView.image = [self supporterImage];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+}
+
+- (UIImage *)supporterImage {
+    if([self.supporter.country isEqualToString:@"se"]) {
+        return [UIImage imageNamed:@"danish falg"];
+    } else if([self.supporter.country isEqualToString:@"fi"]) {
+        return [UIImage imageNamed:@"danish falg"];
+    } else if([self.supporter.country isEqualToString:@"no"]) {
+        return [UIImage imageNamed:@"danish falg"];
+    }
+    // default
+    return [UIImage imageNamed:@"danish falg"];
 }
 
 #pragma mark - Actions

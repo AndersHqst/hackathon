@@ -15,6 +15,8 @@
 - (id)initWithSupporter:(Supporter *)supporter;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
+@property (weak, nonatomic) IBOutlet UILabel *backgroundLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *aboutLabel;
 @property (weak, nonatomic) IBOutlet UIButton *callButton;
