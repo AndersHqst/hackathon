@@ -26,7 +26,8 @@
     
     Supporter *s = [[Supporter alloc] init];
     s.name = @"Anders Høst kjærgaard";
-    s.image = @"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/0fd/11b/165c912.jpg";
+    s.initials = @"AHK";
+//    s.image = @"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/0fd/11b/165c912.jpg";
     s.skills = @[@"programming", @"flying", @"Test automation", @"Shopping for belts", @"Owl stretching", @"Building canons", @"Being naked", @"Eating candy", @"Hijacking in general"];
     s.about = @"Dette er en tekst om Anders Dette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om AndersDette er en tekst om Anders";
     s.nickName = @"Anders and";
@@ -35,11 +36,11 @@
     
     self.supporters = @[s];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    ECMLabel *titleView = [ECMLabel initNavigationTitleLabel:@""];
+    titleView.text = @"Heroes";
+    self.navigationItem.titleView = titleView;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = @"Heroes";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,8 +70,10 @@
     Supporter *s = self.supporters[indexPath.row];
     cell.nameLabel.text = s.name;
     cell.skillsLabel.attributedText = [s attributedStringForSkills];
-    NSURL *imageUrl = [NSURL URLWithString:s.image];
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
+    UIImage *image = [UIImage imageNamed:[s.initials stringByAppendingString:@".png"]];
+    if(!image) {
+        image = [UIImage imageNamed:[s.initials stringByAppendingString:@".jpg"]];
+    }
     cell.image.image = image;
     
     return cell;

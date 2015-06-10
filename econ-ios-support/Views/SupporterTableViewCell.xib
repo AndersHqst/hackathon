@@ -23,8 +23,14 @@
                         </mask>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1" misplaced="YES" text="Expertise" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-7d-eQk">
-                    <rect key="frame" x="161" y="46" width="431" height="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-d6-trS">
+                    <rect key="frame" x="161" y="43" width="431" height="31"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1" text="Expertise" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-7d-eQk">
+                    <rect key="frame" x="161" y="74" width="431" height="12"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="500" constant="74" id="adX-A2-VVv"/>
                     </constraints>
@@ -37,23 +43,17 @@
                         </mask>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6QB-d6-trS">
-                    <rect key="frame" x="161" y="8" width="431" height="31"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="6QB-d6-trS" firstAttribute="top" secondItem="dBO-KM-4to" secondAttribute="top" id="69G-sO-5Sj"/>
+                <constraint firstItem="6QB-d6-trS" firstAttribute="top" secondItem="dBO-KM-4to" secondAttribute="top" constant="35" id="69G-sO-5Sj"/>
                 <constraint firstItem="dBO-KM-4to" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="BhF-Tx-ybA"/>
                 <constraint firstItem="Aux-7d-eQk" firstAttribute="top" secondItem="6QB-d6-trS" secondAttribute="bottom" id="IPZ-1A-aJq"/>
                 <constraint firstItem="dBO-KM-4to" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="KLx-si-my1"/>
                 <constraint firstItem="Aux-7d-eQk" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="KXa-RC-FLy"/>
                 <constraint firstItem="6QB-d6-trS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="PJu-mM-ka2"/>
                 <constraint firstItem="Aux-7d-eQk" firstAttribute="height" secondItem="6QB-d6-trS" secondAttribute="height" id="TL4-ly-G70"/>
-                <constraint firstItem="dBO-KM-4to" firstAttribute="top" secondItem="6QB-d6-trS" secondAttribute="top" id="VRw-l8-kLx"/>
+                <constraint firstItem="dBO-KM-4to" firstAttribute="top" secondItem="6QB-d6-trS" secondAttribute="top" constant="-35" id="VRw-l8-kLx"/>
                 <constraint firstItem="Aux-7d-eQk" firstAttribute="trailing" secondItem="6QB-d6-trS" secondAttribute="trailing" id="Xx0-oG-X3d"/>
                 <constraint firstItem="Aux-7d-eQk" firstAttribute="leading" secondItem="dBO-KM-4to" secondAttribute="trailing" constant="24" id="aD4-oy-aEQ"/>
                 <constraint firstAttribute="bottom" secondItem="Aux-7d-eQk" secondAttribute="bottom" constant="84" id="cQi-dV-fFz"/>

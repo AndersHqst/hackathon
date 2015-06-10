@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "econ-ios-support/Controllers/SupportDetailViewController.m"
-            timestampString = "455648903.492279"
+            timestampString = "455652085.984203"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>

@@ -61,12 +61,6 @@
     [super viewDidLoad];
     [self.profileImageView setCircularProfileImage];
     
-//    self.scrollView = (UIScrollView *)[[NSBundle mainBundle] loadNibNamed:@"SupportDetailView" owner:self options:nil][0];
-//        self.scrollView.frame = CGRectMake(0, 0, 320, 500);
-//        self.scrollView.contentSize = CGSizeMake(320, 500);
-//    [self.view addSubview:self.scrollView];
-    
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.hidesBackButton = YES;
     
@@ -76,16 +70,11 @@
     
     self.profileImageView.image = [UIImage imageNamed:@"agent_gray_resized.png"];
     
-    dispatch_queue_t q = dispatch_queue_create("com.e-conomic.support", NULL);
-    dispatch_async(q, ^{
-        NSURL *imageUrl = [NSURL URLWithString:self.supporter.image];
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
-        if(image){
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.profileImageView.image = image;
-            });
-        }
-    });
+    UIImage *image = [UIImage imageNamed:[self.supporter.initials stringByAppendingString:@".png"]];
+    if(!image) {
+        image = [UIImage imageNamed:[self.supporter.initials stringByAppendingString:@".jpg"]];
+    }
+    self.profileImageView.image = image;
     
     self.aboutLabel.text = self.supporter.about;
     self.backgroundLabel.text = self.supporter.background;

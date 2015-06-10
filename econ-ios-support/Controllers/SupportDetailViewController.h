@@ -13,7 +13,7 @@
 @interface SupportDetailViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 - (id)initWithSupporter:(Supporter *)supporter;
-
+@property (nonatomic, strong)UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *skillsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
 @property (weak, nonatomic) IBOutlet UILabel *backgroundLabel;

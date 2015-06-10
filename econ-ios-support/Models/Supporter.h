@@ -21,6 +21,7 @@
 @property (strong, nonatomic)NSString *image;
 @property (strong, nonatomic)NSString *background;
 @property (strong, nonatomic)NSString *country;
+@property (strong, nonatomic)NSString *initials;
 
 - (NSMutableAttributedString *)attributedStringForSkills;
 
