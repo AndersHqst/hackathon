@@ -38,7 +38,10 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://econ-ios-proxy.staging.e-conomic.ws/feed"]];
     [NSURLConnection sendAsynchronousHTTPRequest:request queue:self.queue completionHandler:^(NSHTTPURLResponse *response, id responseObject, NSError *error){
         if(response.SUCCESS) {
-            self.posts = [Post arrayOfModelsFromDictionaries:responseObject];
+            NSArray *posts = [Post arrayOfModelsFromDictionaries:responseObject];
+            self.posts = [posts sortedArrayUsingComparator:^NSComparisonResult(Post *post1, Post *post2) {
+                return [post2.date compare:post1.date];
+            }];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
@@ -83,7 +86,13 @@
     NSMutableAttributedString *authorString = [[NSMutableAttributedString alloc] initWithString:post.author];
     [authorString addAttribute:NSForegroundColorAttributeName value:[UIColor ecm_blue] range:NSMakeRange(0, post.author.length)];
     cell.authorLabel.attributedText = authorString;
-    cell.descriptionLabel.text = post.title;
+    NSString *text = nil;
+    if(post.title.length < 110) {
+        text = [post.title stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+    } else {
+        text = [[[post.title substringToIndex:110] stringByAppendingString:@"..."] stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+    }
+    cell.descriptionLabel.text = text;
     
     return cell;
 }
